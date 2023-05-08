@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
+
 const Login = () => {
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     setValue,
     formState: { errors },
   } = useForm();
@@ -14,11 +15,27 @@ const Login = () => {
   const navegar = useNavigate();
 
   const gestorFormulario = async (data) => {
-    await axios
+   
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const localStorageData = localStorage.getItem("datosUsuario");
+      const usuario = localStorageData
+        ? JSON.parse(localStorageData).userId
+        : null;
+      const token = localStorageData ? JSON.parse(localStorageData).token : null;
+      console.log(usuario);
+
+     axios
       .post(process.env.REACT_APP_BACKEND_URL + "/usuarios/login", {
         email: data.email,
         password: data.password,
-      })
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+      )
       .then((response) => {
         console.log("Login Correcto");
         console.log(response.data);
@@ -83,5 +100,5 @@ const Login = () => {
     </div>
   );
 };
-
+};
 export default Login;
