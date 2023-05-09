@@ -47,7 +47,7 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/inicio" element={<Inicio />} />
+          <Route path="/" element={<Inicio />} />
           <Route path="/launchs" element={<Launchs />} />
           <Route path="/spacecrafts" element={<Spacecrafts />} />
           <Route path="/satelites" element={<Satelites />} />
