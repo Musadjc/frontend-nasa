@@ -22,29 +22,31 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="navbar">
-          <NavLink className={"navlink"} to="/">
+        <div className="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <NavLink className={"navlink"} to="/" class="nav-link active " style={{color: "white"}}>
             Inicio
           </NavLink>
-          <NavLink className={"navlink"} to="/launchs">
+          <NavLink className={"navlink"} to="/launchs" class="nav-link" style={{color: "white"}}>
             Launchs
           </NavLink>
-          <NavLink className={"navlink"} to="/spacecrafts">
+          <NavLink className={"navlink"} to="/spacecrafts" class="nav-link" style={{color: "white"}}>
             Spacecrafts
           </NavLink>
-          <NavLink className={"navlink"} to="/satelites">
+          <NavLink className={"navlink"} to="/satelites" class="nav-link" style={{color: "white"}}>
             Satelites
           </NavLink>
-          <NavLink className={"navlink"} to="/signup">
+          <NavLink className={"navlink"} to="/signup" class="nav-link" style={{color: "white"}}>
             Crear Cuenta
           </NavLink>
-          <NavLink className={"navlink"} to="/login">
+          <NavLink className={"navlink"} to="/login" class="nav-link" style={{color: "white"}}>
             Login
           </NavLink>
-          <NavLink className={"navlink"} to="/logout">
+          <NavLink className={"navlink"} to="/logout" class="nav-link" style={{color: "white"}}>
             Logout
           </NavLink>
         </div>
+        
+
 
         <Routes>
           <Route path="/" element={<Inicio />} />

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from 'react-hook-from';
-
 const Form = () => {
     const {
         register,

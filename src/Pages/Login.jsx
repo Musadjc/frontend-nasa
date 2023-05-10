@@ -16,7 +16,7 @@ const Login = () => {
 
   const gestorFormulario = async (data) => {
      await axios
-      .post(process.env.REACT_APP_BACKEND_URL + "/usuarios/login", {
+      .post(process.env.REACT_APP_BACKEND_URL + "/api/usuarios/login", {
         email: data.email,
         password: data.password,
       })
