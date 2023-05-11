@@ -21,7 +21,7 @@ const VerMisiones = () => {
       if (token) {
         try {
           const response = await axios.get(
-            `${process.env.REACT_APP_BACKEND_URL}/api/launchs`,
+            `${process.env.REACT_APP_BACKEND_URL}/api/misiones`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           setMisiones(response.data.mision);
@@ -38,7 +38,7 @@ const VerMisiones = () => {
     if (token) {
       try {
         await axios.delete(
-          `${process.env.REACT_APP_BACKEND_URL}/api/launchs/${id}`,
+          `${process.env.REACT_APP_BACKEND_URL}/api/misiones/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMisiones(misiones.filter((mision) => mision._id !== id));
