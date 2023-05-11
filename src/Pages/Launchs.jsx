@@ -37,7 +37,7 @@ const LaunchForm = () => {
       <div className="p-4 bg-primary rounded">
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="missionName">
-            <Form.Label className="text-light">Nombre de la misión:</Form.Label>
+            <Form.Label className="text-light">Nombre del Lanzamiento:</Form.Label>
             <Form.Control
               type="text"
               value={missionName}
