@@ -38,7 +38,7 @@ const VerMisiones = () => {
     if (token) {
       try {
         await axios.delete(
-          `${process.env.REACT_APP_BACKEND_URL}/api/usuarios${id}`,
+          `${process.env.REACT_APP_BACKEND_URL}/misiones/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMisiones(misiones.filter((mision) => mision._id !== id));
