@@ -29,7 +29,7 @@ function App() {
           <NavLink className={"navlink"} to="/" class="nav-link active " style={{color: "white"}}>
             Inicio
           </NavLink>
-          <NavLink className={"navlink"} to="/launchs" class="nav-link" style={{color: "white"}}>
+          <NavLink className={"navlink"} to="/misiones" class="nav-link" style={{color: "white"}}>
             Misiones
           </NavLink>
           <NavLink className={"navlink"} to="/launchs" class="nav-link" style={{color: "white"}}>
