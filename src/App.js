@@ -16,6 +16,9 @@ import Satelites from './Pages/Satelites';
 import Logout from "./Pages/Logout";
 import Login from "./Pages/Login";
 import Alta from "./Pages/Alta";
+import Misiones from './Pages/Misiones';
+
+//Modulos importados
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
         <div className="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
           <NavLink className={"navlink"} to="/" class="nav-link active " style={{color: "white"}}>
             Inicio
+          </NavLink>
+          <NavLink className={"navlink"} to="/launchs" class="nav-link" style={{color: "white"}}>
+            Misiones
           </NavLink>
           <NavLink className={"navlink"} to="/launchs" class="nav-link" style={{color: "white"}}>
             Launchs
@@ -50,6 +56,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Inicio />} />
+          <Route path="/misiones" element={<Misiones />} />
           <Route path="/launchs" element={<Launchs />} />
           <Route path="/spacecrafts" element={<Spacecrafts />} />
           <Route path="/satelites" element={<Satelites />} />
