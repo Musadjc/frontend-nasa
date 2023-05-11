@@ -1,7 +1,4 @@
 import React from 'react';
-import Launchs from './Launchs'; 
-import Spacecrafts from './Spacecrafts'; 
-import Satelites from './Satelites';
 const Inicio = () => {
 	return (
 		<div>
